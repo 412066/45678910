@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人學習歷程數位檔案 Portfolio</title>
+    <!-- 修正 Tailwind CSS 引入路徑 -->
+    <script src="https://jsdelivr.net"></script>
+    <!-- 修正 FontAwesome 圖標引入路徑 -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased scroll-smooth">
+
+    <!-- 頂部導航列 -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <span class="text-xl font-bold tracking-tight text-blue-600">學檔 Portfolio</span>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">關於我</a>
+                <a href="#summary" class="text-gray-600 hover:text-blue-600 transition">綜整摘要</a>
+                <a href="#courses" class="text-gray-600 hover:text-blue-600 transition">課程成果</a>
+                <a href="#activities" class="text-gray-600 hover:text-blue-600 transition">多元表現</a>
+            </div>
+            <!-- 行動裝置選單按鈕 -->
+            <button onclick="toggleMenu()" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 行動裝置下拉選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 py-4 space-y-3">
+            <a href="#about" onclick="toggleMenu()" class="block text-gray-600">關於我</a>
+            <a href="#summary" onclick="toggleMenu()" class="block text-gray-600">綜整摘要</a>
+            <a href="#courses" onclick="toggleMenu()" class="block text-gray-600">課程成果</a>
+            <a href="#activities" onclick="toggleMenu()" class="block text-gray-600">多元表現</a>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊（關於我） -->
+    <header id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-3 gap-12 items-center">
+        <div class="md:col-span-2 space-y-6">
+            <div class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold tracking-wide">
+                目標校系：資訊工程學系 / 資料科學組
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-950 tracking-tight">
+                你好，我是 <span class="text-blue-600">王小明</span>
+            </h1>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                來自國立示範高級中學。我熱愛透過程式解決生活中的問題，在高中三年的彈性學習時間中，我專注於演算法實作、網頁開發以及探索資料科學。期望能將這份熱忱帶入大學的學術殿堂。
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-md text-sm font-medium">#Python</span>
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-md text-sm font-medium">#網頁前端</span>
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-md text-sm font-medium">#APCS 三級</span>
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-md text-sm font-medium">#自主學習</span>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <!-- 個人形象照/大頭貼位置 -->
+            <div class="w-48 h-48 md:w-64 md:h-64 bg-gray-200 rounded-2xl border-4 border-white shadow-xl flex items-center justify-center text-gray-400">
+                <i class="fa-solid fa-user text-6xl"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 黃金首頁區塊：250字綜整反思摘要 -->
+    <section id="summary" class="bg-white border-y border-gray-100 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl font-bold text-gray-950 mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-star text-amber-500"></i> 115 個人申請黃金首頁（綜整反思）
+            </h2>
+            <div class="bg-blue-50/50 border-l-4 border-blue-600 p-6 rounded-r-xl space-y-4">
+                <p class="text-gray-700 leading-relaxed font-medium">
+                    【摘要】高中三年我透過 PBL（問題導向學習）架構，深入探索資工領域。我發現自己對「資料可視化」最感興趣（What），進而自主開發了一套社區雨量監測系統，並取得全國競賽佳作（Result）。過程中曾面臨 API 數據斷線的系統瓶頸（Challenge），我藉由翻閱國外文件、串接備用伺服器成功解決（Solution）。這次經歷不僅磨練了技術，更讓我理解到主動定義問題與實作驗證的重要性，完美契合貴系的核心素養要求。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 課程學習成果 -->
+    <section id="courses" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-3xl font-extrabold text-gray-950 tracking-tight mb-2">課程學習成果</h2>
+        <p class="text-gray-500 mb-8">課堂延伸的專題與探究，展現學科核心素養與反思能力。</p>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- 卡片 1 -->
+            <div class="bg-white rounded-2xl shadow-xs border border-gray-100 overflow-hidden hover:shadow-md transition">
+                <div class="p-6 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-sm">資訊科技課</span>
+                        <span class="text-sm text-gray-400">高二下學期</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">學期專題：利用 Python 進行彈珠阻尼器抗震數據分析</h3>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        結合物理課的阻尼器原理與資訊課的資料處理，利用 Python 的 Matplotlib 函式庫，將地震模擬數據繪製成動態圖表，量化分析不同彈珠重量下的減震效果（SMART原則）。
+                    </p>
+                    <div class="pt-4 border-t border-gray-50 flex justify-between items-center">
+                        <span class="text-xs text-green-600 bg-green-50 px-2 py-0.5 rounded-sm font-medium">成果：校內發表優等</span>
+                        <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                            檢視完整 PDF <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 卡片 2 -->
+            <div class="bg-white rounded-2xl shadow-xs border border-gray-100 overflow-hidden hover:shadow-md transition">
+                <div class="p-6 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-sm">數學與生活探究</span>
+                        <span class="text-sm text-gray-400">高三上學期</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">專題：生活中的幾何學與最佳路徑最佳化</h3>
+                    <p class="text-gray-600 text-sm line-clamp-3">
+                        研究外送平台配送路徑。將戴克斯特拉演算法（Dijkstra's algorithm）的概念簡化，應用於校園周邊美食街的步行路線規劃，嘗試找出最省時的配送解方。
+                    </p>
+                    <div class="pt-4 border-t border-gray-50 flex justify-between items-center">
+                        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-sm font-medium">學習歷程自述必備</span>
+                        <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-700 flex items-center gap-1">
+                            檢視完整 PDF <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 多元表現 / 自主學習 -->
+    <section id="activities" class="bg-gray-100/50 border-t border-gray-200/50 py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-950 tracking-tight mb-2">多元表現與自主學習</h2>
+            <p class="text-gray-500 mb-8">課外競賽、社團活動與自主學習計畫，展現強烈的不分系/學群熱忱。</p>
+            <div class="space-y-6">
+                <!-- 項目 1：自主學習 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200/60 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-emerald-50 text-emerald-700 text-xs font-bold px-2 py-1 rounded-sm">自主學習計畫</span>
+                            <span class="text-sm text-gray-400">18 週實踐</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900">自製物聯網智慧血氧/心率健康監測器</h4>
+                        <p class="text-sm text-gray-600 max-w-3xl">
+                            利用彈性學習時間，購買 ESP32 晶片與感測器。從零開始焊接電路、編寫 C++ 韌體代碼，並串接 Firebase 資料庫進行雲端即時監控，實作完整軟硬體整合。
+                        </p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href="#" class="inline-flex items-center justify-center bg-gray-900 text-white text-sm font-medium px-4 py-2 rounded-xl hover:bg-gray-800 transition gap-2">
+                            <i class="fa-solid fa-file-pdf"></i> 計畫書與成果
+                        </a>
+                    </div>
+                </div>
+                <!-- 項目 2：競賽（已修正補全） -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200/60 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-orange-50 text-orange-700 text-xs font-bold px-2 py-1 rounded-sm">學科競賽</span>
+                            <span class="text-sm text-gray-400">2025 年 10 月</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-900">全國高中資訊學科能力競賽 分區佳作</h4>
+                        <p class="text-sm text-gray-600 max-w-3xl">
+                            代表學校參加區域賽，在 3 小時內現場解題，考驗演算法思考（如動態規劃、圖論問題）與高壓環境下的抗壓性。
+                        </p>
+                    </div>
+                    <div class="shrink-0">
